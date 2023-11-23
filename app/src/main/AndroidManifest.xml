@@ -13,9 +13,18 @@
         android:theme="@style/Theme.Fitness"
         tools:targetApi="33">
         <activity
+            android:name=".activity_5"
+            android:exported="false" />
+        <activity
+            android:name=".activity_4"
+            android:exported="false" />
+        <activity
+            android:name=".activity_3"
+            android:exported="false" />
+        <activity
             android:name=".Activity2"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

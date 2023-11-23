@@ -12,6 +12,7 @@
         android:layout_height="39dp"
         android:background="@null"
         android:text="BUILD YOUR"
+        android:textSize="20dp"
         android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,17 +22,18 @@
         app:layout_constraintVertical_bias="0.131" />
 
     <TextView
-        android:layout_width="159dp"
-        android:layout_height="46dp"
+        android:layout_width="202dp"
+        android:layout_height="37dp"
         android:background="@null"
         android:text="PERFECT BODY"
         android:textColor="@color/colorWhite"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.157" />
 
     <TextView
         android:layout_width="376dp"
@@ -40,7 +42,7 @@
         android:fontFamily="sans-serif"
         android:text="according to your BMI and AGE"
         android:textColor="@color/colorWhite"
-        android:textSize="15sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.971"

@@ -26,7 +26,28 @@ public class MainActivity extends AppCompatActivity {
                 Activity2();
             }
         });
-        ;
+
+        Btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity2();
+            }
+        });
+
+        Btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity2();
+            }
+        });
+
+        Btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Activity2();
+            }
+        });
+
     }
 
     private void Activity2() {

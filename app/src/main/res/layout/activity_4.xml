@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2"
-    android:background="@color/colorDarkRed">
+    android:background="@color/colorDarkRed"
+    tools:context=".activity_4">
 
 
     <TextView
         android:layout_width="316dp"
         android:layout_height="72dp"
         android:gravity="center"
-        android:text="CHOOSE YOUR GOAL"
+        android:text="CHOOSE THE BODY YOU WANT"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151" />
+
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -45,9 +46,8 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="20dp"
-            android:text="LOSE WEIGHT"
+            android:text="ATHLETE"
             android:textColor="@color/white" />
-
 
     </FrameLayout>
 
@@ -72,10 +72,9 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="20dp"
-            android:text="GAIN MUSCLE MASS"
+            android:text="HERO"
             android:textColor="@color/white" />
     </FrameLayout>
-
 
     <FrameLayout
         android:layout_width="296dp"
@@ -99,9 +98,8 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="20dp"
-            android:text="GET SHREDDED"
+            android:text="BODY BUILDER"
             android:textColor="@color/white" />
     </FrameLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
