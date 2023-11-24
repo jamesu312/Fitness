@@ -6,27 +6,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Activity"
+        android:icon="@drawable/logo"
+        android:label="FitFussion"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness"
         tools:targetApi="33">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity_5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity_4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity_3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Activity2"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".logo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
