@@ -54,49 +54,53 @@
         android:id="@+id/imgBtn1"
         android:layout_width="153dp"
         android:layout_height="141dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        android:src="@drawable/tambor1" />
+        android:src="@drawable/young" />
 
     <ImageButton
         android:id="@+id/imgBtn2"
         android:layout_width="153dp"
         android:layout_height="141dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.418"
-        android:src="@drawable/joriz" />
+        android:src="@drawable/midyoung" />
 
     <ImageButton
         android:id="@+id/imgBtn3"
         android:layout_width="153dp"
         android:layout_height="141dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.761"
-        android:src="@drawable/patricio" />
+        android:src="@drawable/youngold" />
 
     <ImageButton
         android:id="@+id/imgBtn4"
         android:layout_width="153dp"
         android:layout_height="141dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.762"
-        android:src="@drawable/tortugo" />
+        android:src="@drawable/midold" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

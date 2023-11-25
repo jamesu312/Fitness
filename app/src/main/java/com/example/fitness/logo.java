@@ -4,31 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
+import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class logo extends AppCompatActivity {
 
-    ImageButton img1;
+    Animation up,down;
+
+    ImageView imageView;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        img1 = (ImageButton)findViewById(R.id.logo);
 
-        img1.setOnClickListener(new View.OnClickListener() {
+
+        TextView textView = findViewById(R.id.name);
+        down = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.down);
+        textView.setAnimation(down);
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                MainActivity();
+            public void run() {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                finish();
             }
-        });
-    }
+        },3500);
 
-    private void MainActivity() {
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
+
     }
 
 }
