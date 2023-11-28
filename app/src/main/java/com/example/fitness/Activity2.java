@@ -28,38 +28,26 @@ public class Activity2 extends AppCompatActivity {
         imgB1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity_3();
+                bmi();
             }
         });
 
         imgB2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity_4();
+                bmi();
             }
         });
 
         imgB3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity_5();
+                bmi();
             }
         });
     }
-
-    private void activity_3() {
-        Intent intent = new Intent(this,activity_3.class);
-        startActivity(intent);
-    }
-
-
-    private void activity_4() {
-        Intent intent = new Intent(this,activity_4.class);
-        startActivity(intent);
-    }
-
-    private void activity_5() {
-        Intent intent = new Intent(this,activity_5.class);
+    private void bmi() {
+        Intent intent = new Intent(this,bmi.class);
         startActivity(intent);
     }
 

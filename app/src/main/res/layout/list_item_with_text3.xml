@@ -1,0 +1,25 @@
+<!-- Modify list_item_with_text.xml to include an EditText for repetitions -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/listItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exercise Name" />
+
+    <EditText
+        android:id="@+id/additionalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listItemText"
+        android:hint="Additional Info" />
+
+    <EditText
+        android:id="@+id/repetitionsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/additionalEditText"
+        android:hint="Repetitions Done" />
+</RelativeLayout>
