@@ -1,5 +1,7 @@
 package com.example.fitness2;
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.fitness.R;
+import com.example.fitness1.ExerciseData1;
 import com.example.fitness2.ExerciseData2;
 
 import androidx.annotation.NonNull;
@@ -35,18 +38,40 @@ public class CustomListAdapter2 extends ArrayAdapter<ExerciseData2> {
             listItem = inflater.inflate(R.layout.list_item_with_test2, parent, false);
         }
 
-        ExerciseData2 currentExercise = exerciseList2.get(position);
+        final ExerciseData2 currentExercise = exerciseList2.get(position);
 
-        TextView exerciseName2 = listItem.findViewById(R.id.listItemText);
-        exerciseName2.setText(currentExercise.getExerciseName2());
+        TextView exerciseName = listItem.findViewById(R.id.listItemText);
+        exerciseName.setText(currentExercise.getExerciseName2());
 
-        EditText additionalText2 = listItem.findViewById(R.id.additionalEditText);
-        additionalText2.setText(currentExercise.getAdditionalText2());
-        additionalText2.setEnabled(false);
+        EditText additionalText = listItem.findViewById(R.id.additionalEditText);
+        additionalText.setText(currentExercise.getAdditionalText2());
+        additionalText.setEnabled(false);
 
-        EditText repetitions2 = listItem.findViewById(R.id.repetitionsEditText);
-        repetitions2.setText(String.valueOf(currentExercise.getRepetitions2()));
+        EditText repetitions = listItem.findViewById(R.id.repetitionsEditText);
+        repetitions.setText(String.valueOf(currentExercise.getRepetitions2()));
 
+        repetitions.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // This method is called to notify you that the characters in the EditText are about to be replaced.
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // This method is called to notify you that the characters in the EditText have changed.
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // This method is called to notify you that the characters in the EditText have changed and after the change has been applied.
+                String input = s.toString();
+                if (!input.isEmpty()) {
+                    int newRepetitions = Integer.parseInt(input);
+                    currentExercise.setRepetitions2(newRepetitions);
+                    // Add any actions when repetitions input changes
+                }
+            }
+        });
 
         return listItem;
     }

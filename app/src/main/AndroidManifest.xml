@@ -31,12 +31,6 @@
             android:name="com.example.fitness1.normalweight"
             android:exported="false" />
         <activity
-            android:name=".obese"
-            android:exported="false" />
-        <activity
-            android:name=".overweight"
-            android:exported="false" />
-        <activity
             android:name=".underweight"
             android:exported="false" />
         <activity

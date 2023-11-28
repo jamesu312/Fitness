@@ -1,12 +1,22 @@
-<!-- Modify list_item_with_text.xml to include an EditText for repetitions -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/exerciseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <TextView
         android:id="@+id/listItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@id/exerciseCheckBox"
         android:text="Exercise Name" />
 
     <EditText
@@ -14,6 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/listItemText"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@id/exerciseCheckBox"
         android:hint="Additional Info" />
 
     <EditText
@@ -21,5 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/additionalEditText"
+        android:layout_toEndOf="@id/exerciseCheckBox"
         android:hint="Repetitions Done" />
 </RelativeLayout>

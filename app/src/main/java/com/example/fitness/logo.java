@@ -23,7 +23,6 @@ public class logo extends AppCompatActivity {
         setContentView(R.layout.activity_logo);
 
 
-
         TextView textView = findViewById(R.id.name);
         down = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.down);
         textView.setAnimation(down);
