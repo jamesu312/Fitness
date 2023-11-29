@@ -61,12 +61,12 @@ public class normalweight extends AppCompatActivity {
 
         // Initialize exerciseList with ExerciseData objects
         exerciseList1 = new ArrayList<>();
-        exerciseList1.add(new ExerciseData1 ("Push push push", "20 seconds", 0));
-        exerciseList1.add(new ExerciseData1 ("Plank", "30 seconds", 0));
-        exerciseList1.add(new ExerciseData1 ("Jumping Jacks", "30 jumps", 0));
-        exerciseList1.add(new ExerciseData1 ("Jogging", "500meters", 0));
-        exerciseList1.add(new ExerciseData1 ("Standing Knee Raises", "50 reps for both sides", 0));
-        exerciseList1.add(new ExerciseData1 ( "Squats", "25 reps", 0));
+        exerciseList1.add(new ExerciseData1 ("Push Up", "40 seconds", 0));
+        exerciseList1.add(new ExerciseData1 ("Plank", "1 Minute", 0));
+        exerciseList1.add(new ExerciseData1 ("Jumping Jacks", "1 Minute", 0));
+        exerciseList1.add(new ExerciseData1 ("Jogging", "750 Meters", 0));
+        exerciseList1.add(new ExerciseData1 ("Standing Knee Raises Both sides", "1Minute 30 Seconds", 0));
+        exerciseList1.add(new ExerciseData1 ( "Squats", "50 reps", 0));
 
         // Retrieve data from SharedPreferences and update exerciseList
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);

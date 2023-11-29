@@ -1,4 +1,4 @@
-package com.example.fitness3;
+package com.example.gainmuscle;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -20,32 +20,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.example.fitness.CustomListAdapter;
 import com.example.fitness.ExerciseData;
-import com.example.fitness2.CustomListAdapter2;
-import com.example.fitness3.CustomListAdapter3;
-
-import com.example.fitness3.CustomListAdapter3;
-import com.example.fitness3.ExerciseData3;
-
 import com.example.fitness.R;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-
-public class obese extends AppCompatActivity {
+public class Overweight extends AppCompatActivity {
     private static final int REQUEST_CODE_WRITE_STORAGE_PERMISSION = 101;
 
-    private ListView listView3;
-    private CustomListAdapter3 adapter;
-    private ArrayList<ExerciseData3> exerciseList3;
+    private ListView listView;
+    private CustomList1 adapter;
+    private ArrayList<ExerciseD1> exerciseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_obese);
+        setContentView(R.layout.activity_overweight2);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -62,17 +58,17 @@ public class obese extends AppCompatActivity {
 
 
 
-        listView3 = findViewById(R.id.listView3);
+        listView = findViewById(R.id.listView1);
 
 
         // Initialize exerciseList with ExerciseData objects
-        exerciseList3 = new ArrayList<>();
-        exerciseList3.add(new ExerciseData3 ("Wall Push-Ups", "1 Minute", 0));
-        exerciseList3.add(new ExerciseData3 ("Walking", "20 Minutes", 0));
-        exerciseList3.add(new ExerciseData3 ("Jumping Jacks", "1 Minute", 0));
-        exerciseList3.add(new ExerciseData3 ("Chair Squats", "1 Minute", 0));
-        exerciseList3.add(new ExerciseData3 ("Standing Knee Raises", "50 reps for both sides", 0));
-        exerciseList3.add(new ExerciseData3 ( "Squats", "25 reps", 0));
+        exerciseList = new ArrayList<>();
+        exerciseList.add(new ExerciseD1 ("Push kjkook", "20 seconds", 0));
+        exerciseList.add(new ExerciseD1 ("Plankasdadas", "25 seconds", 0));
+        exerciseList.add(new ExerciseD1 ("Jumpingasdada Jacks", "25 seconds", 0));
+        exerciseList.add(new ExerciseD1 ("Jogging", "500meters", 0));
+        exerciseList.add(new ExerciseD1 ("Standing Knee Raises", "50 reps for both sides", 0));
+        exerciseList.add(new ExerciseD1 ("Squats", "25 reps", 0));
 
         // Retrieve data from SharedPreferences and update exerciseList
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
@@ -81,17 +77,17 @@ public class obese extends AppCompatActivity {
         // Parse the data and update exerciseList
         // ExerciseData object format assumed: "ExerciseName|AdditionalText|Repetitions"
         for (String exerciseDataString : exerciseDataSet) {
-            String[] exerciseData2 = exerciseDataString.split("\\|");
-            if (exerciseData2   .length == 3) {
-                String exerciseName = exerciseData2[0];
-                String additionalText = exerciseData2[1];
-                int repetitions = Integer.parseInt(exerciseData2[2]);
+            String[] exerciseD1 = exerciseDataString.split("\\|");
+            if (exerciseD1.length == 3) {
+                String exerciseName = exerciseD1[0];
+                String additionalText = exerciseD1[1];
+                int repetitions = Integer.parseInt(exerciseD1[2]);
 
                 // Find and update the corresponding ExerciseData object
-                for (ExerciseData3 exercise : exerciseList3) {
-                    if (exercise.getExerciseName3().equals(exerciseName)) {
-                        exercise.setAdditionalText3(additionalText);
-                        exercise.setRepetitions3(repetitions);
+                for (ExerciseD1 exercise : exerciseList) {
+                    if (exercise.getExerciseName().equals(exerciseName)) {
+                        exercise.setAdditionalText(additionalText);
+                        exercise.setRepetitions(repetitions);
                         break;
                     }
                 }
@@ -99,14 +95,14 @@ public class obese extends AppCompatActivity {
         }
 
         // Set up the ListView with the retrieved and updated data
-        adapter = new CustomListAdapter3(this, exerciseList3);
-        listView3.setAdapter(adapter);
+        adapter = new CustomList1(this, exerciseList);
+        listView.setAdapter(adapter);
 
         findViewById (R.id.captureSnapshotButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Capture a snapshot of the ListView
-                Bitmap listViewBitmap = takeSnapshotOfListView(listView3);
+                Bitmap listViewBitmap = takeSnapshotOfListView(listView);
 
                 // Save the captured bitmap to the gallery
                 saveBitmapToGallery(listViewBitmap);
@@ -145,7 +141,6 @@ public class obese extends AppCompatActivity {
             }
         }
     }
-
 
 }
 

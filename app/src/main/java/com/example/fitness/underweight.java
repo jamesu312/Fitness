@@ -64,8 +64,8 @@ public class underweight extends AppCompatActivity {
         // Initialize exerciseList with ExerciseData objects
         exerciseList = new ArrayList<>();
         exerciseList.add(new ExerciseData("Push Up", "20 seconds", 0));
-        exerciseList.add(new ExerciseData("Plank", "30 seconds", 0));
-        exerciseList.add(new ExerciseData("Jumping Jacks", "30 jumps", 0));
+        exerciseList.add(new ExerciseData("Plank", "25 seconds", 0));
+        exerciseList.add(new ExerciseData("Jumping Jacks", "25 seconds", 0));
         exerciseList.add(new ExerciseData("Jogging", "500meters", 0));
         exerciseList.add(new ExerciseData("Standing Knee Raises", "50 reps for both sides", 0));
         exerciseList.add(new ExerciseData("Squats", "25 reps", 0));

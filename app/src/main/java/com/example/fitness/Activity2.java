@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.gainmuscle.bmi2;
+import com.example.getshred.bmi3;
+
 import java.util.Objects;
 
 public class Activity2 extends AppCompatActivity {
@@ -35,14 +38,14 @@ public class Activity2 extends AppCompatActivity {
         imgB2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmi();
+                bmi2();
             }
         });
 
         imgB3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmi();
+                bmi3();
             }
         });
     }
@@ -50,5 +53,17 @@ public class Activity2 extends AppCompatActivity {
         Intent intent = new Intent(this,bmi.class);
         startActivity(intent);
     }
+
+    private void bmi2() {
+        Intent intent = new Intent(this, bmi2.class);
+        startActivity(intent);
+    }
+
+
+    private void bmi3() {
+        Intent intent = new Intent(this, bmi3.class);
+        startActivity(intent);
+    }
+
 
 }

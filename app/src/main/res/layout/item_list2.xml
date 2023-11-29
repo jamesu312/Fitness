@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <CheckBox
+        android:id="@+id/exerciseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-1dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+        android:id="@+id/listItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@id/exerciseCheckBox"
+        android:text="Exercise Name" />
+
+    <EditText
+        android:id="@+id/additionalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listItemText"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@id/exerciseCheckBox"
+        android:hint="Additional Info" />
+
+    <EditText
+        android:id="@+id/repetitionsEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/additionalEditText"
+        android:layout_toEndOf="@id/exerciseCheckBox"
+        android:hint="Repetitions Done" />
+
+</RelativeLayout>

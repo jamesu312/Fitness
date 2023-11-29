@@ -50,57 +50,136 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.211" />
 
-    <ImageButton
-        android:id="@+id/imgBtn1"
+    <FrameLayout
         android:layout_width="153dp"
         android:layout_height="141dp"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419"
-        android:src="@drawable/young" />
+        app:layout_constraintVertical_bias="0.418">
 
-    <ImageButton
-        android:id="@+id/imgBtn2"
+        <ImageButton
+            android:id="@+id/imgBtn1"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/young"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.413" />
+
+        <TextView
+            android:layout_width="75sp"
+            android:layout_height="42sp"
+            android:text="Age: 19-29"
+            android:textColor="@color/white" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
         android:layout_width="153dp"
         android:layout_height="141dp"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418"
-        android:src="@drawable/midyoung" />
+        app:layout_constraintVertical_bias="0.418">
 
-    <ImageButton
-        android:id="@+id/imgBtn3"
-        android:layout_width="153dp"
+        <ImageButton
+            android:id="@+id/imgBtn2"
+            android:layout_width="153dp"
+            android:layout_height="141dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/midyoung"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+
+        <TextView
+            android:layout_width="75sp"
+            android:layout_height="42sp"
+            android:text="Age: 30-39"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="155dp"
         android:layout_height="141dp"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        android:src="@drawable/youngold" />
+        app:layout_constraintVertical_bias="0.762">
 
-    <ImageButton
-        android:id="@+id/imgBtn4"
+        <ImageButton
+            android:id="@+id/imgBtn3"
+            android:layout_width="153dp"
+            android:layout_height="141dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.761"
+            android:src="@drawable/youngold" />
+
+        <TextView
+            android:layout_width="75sp"
+            android:layout_height="42sp"
+            android:text="Age: 40-49"
+            android:textColor="@color/white" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
         android:layout_width="153dp"
         android:layout_height="141dp"
-        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762"
-        android:src="@drawable/midold" />
+        app:layout_constraintVertical_bias="0.762">
+
+        <ImageButton
+            android:id="@+id/imgBtn4"
+            android:layout_width="153dp"
+            android:layout_height="141dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.887"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.762"
+            android:src="@drawable/midold" />
+
+        <TextView
+            android:layout_width="75sp"
+            android:layout_height="42sp"
+            android:text="Age: 50-59"
+            android:textColor="@color/white" />
+
+
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
