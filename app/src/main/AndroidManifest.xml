@@ -22,6 +22,33 @@
         android:theme="@style/Theme.Fitness"
         tools:targetApi="33">
         <activity
+            android:name="com.example.fitnesssecond1.obeseee"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond1.bbmi1"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond1.oversweights"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond1.normsweights"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond.obesse"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond.second"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond.Overweights"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond.Normalweights"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond.bbmi"
+            android:exported="false" />
+        <activity
             android:name="com.example.getshred.Obesee"
             android:exported="false" />
         <activity

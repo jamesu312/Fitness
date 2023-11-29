@@ -1,5 +1,6 @@
-package com.example.getshred;
+package com.example.fitnesssecond1;
 
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -10,43 +11,35 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.Manifest;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.example.fitness.CustomListAdapter;
-import com.example.fitness.ExerciseData;
 import com.example.fitness.R;
-import com.example.gainmuscle.CustomList;
-import com.example.gainmuscle.ExerciseD;
+import com.example.fitnesssecond.CustomsLists;
+import com.example.fitnesssecond.exercises;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-public class OverWeight extends AppCompatActivity {
+public class normsweights extends AppCompatActivity {
     private static final int REQUEST_CODE_WRITE_STORAGE_PERMISSION = 101;
 
     private ListView listView;
-    private Customlists2 adapter;
-    private ArrayList<Exercise2> exerciseList;
+    private CustomsListss adapter;
+    private ArrayList<exercisess> exerciseList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_over_weight);
-
+        setContentView(R.layout.activity_normsweights);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -55,37 +48,29 @@ public class OverWeight extends AppCompatActivity {
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     REQUEST_CODE_WRITE_STORAGE_PERMISSION);
         } else {
+            // Permission is already granted
+            // Proceed with your logic or show a message
             Toast.makeText(this, "Permission is already granted.", Toast.LENGTH_SHORT).show();
+            // Continue with your app logic
         }
 
 
 
-
-        listView = findViewById(R.id.listView2);
+        listView = findViewById(R.id.listView1);
 
 
         // Initialize exerciseList with ExerciseData objects
         exerciseList = new ArrayList<>();
-        exerciseList.add(new Exercise2 ("Barbell Squats", "3 sets of 8-12 reps", 0));
-        exerciseList.add(new Exercise2 ("Romanian Deadlift", "3 sets of 8-10 reps", 0));
-        exerciseList.add(new Exercise2 ("Incline Chest Press", "2 sets of 8-12 reps", 0));
-        exerciseList.add(new Exercise2 ("Lateral Raises", "2 sets of 15 reps", 0));
-        exerciseList.add(new Exercise2 ("Plank ", "2 sets of 15 reps", 0));
-        exerciseList.add(new Exercise2 ("Squats", "2 sets of 25 reps", 0));
-        exerciseList.add(new Exercise2 ("sdsds", "2 sets of 25 reps", 0));
-        exerciseList.add(new Exercise2 ("Squasdasdaats", "2 sets of 25 reps", 0));
-        exerciseList.add(new Exercise2 ("Squasadadats", "2 sets of 25 reps", 0));
-        exerciseList.add(new Exercise2 ("Squaasdasdasdsdadwdwadts", "2 sets of 25 reps", 0));
-
-
-
-
-
+        exerciseList.add(new exercisess("aged 30-39", "20 seconds", 0));
+        exerciseList.add(new exercisess("normalweights", "25 seconds", 0));
+        exerciseList.add(new exercisess("Jumping Jacks", "25 seconds", 0));
+        exerciseList.add(new exercisess("Jogging", "500meters", 0));
+        exerciseList.add(new exercisess("Standing Knee Raises", "50 reps for both sides", 0));
+        exerciseList.add(new exercisess("Squats", "25 reps", 0));
 
         // Retrieve data from SharedPreferences and update exerciseList
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         Set<String> exerciseDataSet = sharedPreferences.getStringSet("exerciseList", new HashSet<>());
-
 
         // Parse the data and update exerciseList
         // ExerciseData object format assumed: "ExerciseName|AdditionalText|Repetitions"
@@ -97,7 +82,7 @@ public class OverWeight extends AppCompatActivity {
                 int repetitions = Integer.parseInt(exerciseD[2]);
 
                 // Find and update the corresponding ExerciseData object
-                for (Exercise2 exercise : exerciseList) {
+                for (exercisess exercise : exerciseList) {
                     if (exercise.getExerciseName().equals(exerciseName)) {
                         exercise.setAdditionalText(additionalText);
                         exercise.setRepetitions(repetitions);
@@ -108,7 +93,7 @@ public class OverWeight extends AppCompatActivity {
         }
 
         // Set up the ListView with the retrieved and updated data
-        adapter = new Customlists2(this, exerciseList);
+        adapter = new CustomsListss(this, exerciseList);
         listView.setAdapter(adapter);
 
         findViewById (R.id.captureSnapshotButton).setOnClickListener(new View.OnClickListener() {

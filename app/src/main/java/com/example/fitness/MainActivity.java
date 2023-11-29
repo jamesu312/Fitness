@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.fitnesssecond.second;
+
 public class MainActivity extends AppCompatActivity {
     private ImageButton Btn1, Btn2, Btn3, Btn4;
 
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         Btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Activity2();
+                second();
             }
         });
 
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void second() {
+        Intent intent = new Intent(this, second.class);
+        startActivity(intent);
     }
 
     private void Activity2() {
