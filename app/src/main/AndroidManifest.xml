@@ -22,6 +22,18 @@
         android:theme="@style/Theme.Fitness"
         tools:targetApi="33">
         <activity
+            android:name="com.example.fitnesssecond2.obessee"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond2.oversweightss"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond2.normsweight"
+            android:exported="false" />
+        <activity
+            android:name="com.example.fitnesssecond2.bbmi2"
+            android:exported="false" />
+        <activity
             android:name="com.example.fitnesssecond1.obeseee"
             android:exported="false" />
         <activity

@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 
 import com.example.fitness.R;
 import com.example.fitnesssecond1.bbmi1;
+import com.example.fitnesssecond2.bbmi2;
 
 public class second extends AppCompatActivity {
 
@@ -42,9 +43,15 @@ public class second extends AppCompatActivity {
         imgB3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bbmi();
+                bbmi2();
             }
         });
+    }
+
+    private void bbmi2() {
+        Intent intent = new Intent(this, bbmi2.class);
+        startActivity(intent);
+
     }
 
     private void bbmi1() {
